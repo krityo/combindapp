@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import{IonicStorageModule} from '@ionic/storage';
 
 import { MyApp } from './app.component';
 
@@ -27,7 +28,6 @@ import { TabArticlePage } from '../pages/tab-article/tab-article';
 import { TabContactPage } from '../pages/tab-contact/tab-contact';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
-import { ThaiDatePipe } from '../pipes/thai-date/thai-date';
 import { RegisterPage } from '../pages/register/register';
 
 
@@ -52,7 +52,8 @@ RegisterPage
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

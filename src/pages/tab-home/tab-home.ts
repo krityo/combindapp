@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
+import{Storage} from '@ionic/storage';
 
 /**
  * Generated class for the TabHomePage page.
@@ -15,8 +16,15 @@ import { RegisterPage } from '../register/register';
   templateUrl: 'tab-home.html',
 })
 export class TabHomePage {
+  email:any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams,public storage:Storage) {
+
+      //สร้างตัวแประเก็บลง Storge
+      this.storage.set('myemail','kkkk@hotmail.com');
+    this.storage.get('myemail').then((result)=>{this.email=result;});
+
   }
 
   ionViewDidLoad() {
