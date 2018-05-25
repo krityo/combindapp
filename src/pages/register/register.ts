@@ -33,7 +33,7 @@ export class RegisterPage {
     this.webService.postData(this.userData,"signup.php").then((result) => {
      this.ResponseData = result;
      if(this.ResponseData.success){
-       alert("ลงทะเบียนเรียบร้อย");
+       alert("ลงทะเบียนเรียบร้อยนะจะบอกให้");
      }else{
        alert("มีข้อผิดพลาดบางอย่าง ลงทะเบียนไม่สำเร็จ");
      }
