@@ -11,12 +11,32 @@
         <ion-icon name="menu"></ion-icon>
     
         </button>
-        <ion-title>บทความ</ion-title>
+        <ion-title>คนไข้วันนี้</ion-title>
       </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+  <ion-list>
+    <ion-item *ngFor="let cdata of responseData"(click)="patientDetail(cdata.hn)">
+      <ion-thumbnail item-start>
+        <img src="http://localhost/ionic_api/images/{{cdata.img}}">
+      </ion-thumbnail>
+      <h1>HN : {{cdata.hn}}</h1>
+      <h2> ชื่อ สกุล : {{cdata.pname}}{{cdata.fname}}  {{cdata.lname}}            {{cdata.department}}</h2>
+      <p>เลขบัตรประชาชน : {{cdata.cid}}  วันเกิด : {{cdata.birthday}}</p>
+
+      <button ion-button clear item-end (click)="patientDetail(cdata.hn)">View</button>
+    </ion-item>
+
+    
+  </ion-list>
+
 
 </ion-content>

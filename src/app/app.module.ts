@@ -29,6 +29,8 @@ import { TabContactPage } from '../pages/tab-contact/tab-contact';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
 import { RegisterPage } from '../pages/register/register';
+import { PatientPage } from '../pages/patient/patient';
+import { PatientdetailPage } from '../pages/patientdetail/patientdetail';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { RegisterPage } from '../pages/register/register';
     TabContactPage,
     TabsPage,
     CoursedetailPage,
-RegisterPage
+RegisterPage,
+PatientPage,
+PatientdetailPage
  
    
   ],
@@ -69,7 +73,9 @@ RegisterPage
     TabContactPage,
     TabsPage,
     CoursedetailPage,
-    RegisterPage
+    RegisterPage,
+    PatientPage,
+    PatientdetailPage
  
   
   ],
