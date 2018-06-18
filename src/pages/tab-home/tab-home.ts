@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import{Storage} from '@ionic/storage';
+import { TabCarPage } from '../tab-car/tab-car';
 
 /**
  * Generated class for the TabHomePage page.
@@ -34,5 +35,10 @@ export class TabHomePage {
   register()
   {
     this.navCtrl.push(RegisterPage);
+  }
+
+  opencar()
+  {
+    this.navCtrl.push(TabCarPage);
   }
 }

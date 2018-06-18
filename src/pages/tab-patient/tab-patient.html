@@ -22,12 +22,10 @@
 
 <ion-list>
   <ion-item *ngFor="let cdata of responseData"(click)="patientDetail(cdata.cid)">
-    <ion-thumbnail item-start>
-      <img src="http://localhost/ionic_api/images/{{cdata.img}}">
-    </ion-thumbnail>
-    <h1>HN : {{cdata.hn}}</h1>
-    <h2> ชื่อ สกุล : {{cdata.pname}}{{cdata.fname}}  {{cdata.lname}}            {{cdata.department}}</h2>
-    <p>เลขบัตรประชาชน : {{cdata.cid}}  วันเกิด : {{cdata.birthday}}</p>
+    <h3>HN : {{cdata.hn}}</h3>
+    <h3> ชื่อ : {{cdata.pname}}{{cdata.fname}}  {{cdata.lname}}</h3>
+    <p>  แผนก :  {{cdata.department}}</p>
+    <p> วันที่มา:{{cdata.vstdate|date:'dd/MM/yyyy'}}  | เวลา :{{cdata.vsttime}}</p>
 
     <button ion-button clear item-end (click)="patientDetail(cdata.cid)">View</button>
   </ion-item>

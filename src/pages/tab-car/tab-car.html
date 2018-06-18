@@ -16,12 +16,13 @@
 
 <ion-list>
   <ion-item *ngFor="let cdata of responseData">
-    <ion-thumbnail item-start>
-      <img src="http://localhost/ionic_api/images/ambulance.png">
-    </ion-thumbnail>
-    <h1>แผนก : {{cdata.persionusecar}}         สถานที่ไป : {{cdata.station}}  </h1>
-    <h2> ใช้ในงาน : {{cdata.gostation}}     วันที่ไป :  {{cdata.dateuse|date:'dd/MM/yyyy'}}    วันที่กลับ :  {{cdata.datebake|date:'dd/MM/yyyy'}}  </h2>
-    <p>   จำนวผู้ร่วมเดินทาง :  {{cdata.numpersion}} คน   | ผู้บันทึกขอใช้ : {{cdata.persionuse}}  ตำแหน่ง : {{cdata.Position}}</p>
+    <h3>แผนก : {{cdata.persionusecar}}    </h3>
+    <h3>สถานที่ไป : {{cdata.station}}  </h3>
+    <h3> ใช้ในงาน : {{cdata.gostation}}     </h3>
+    <h3> วันที่ไป :  {{cdata.dateuse|date:'dd/MM/yyyy'}}  กลับ :  {{cdata.datebake|date:'dd/MM/yyyy'}} </h3>
+    <p>   จำนวผู้ร่วมเดินทาง :  {{cdata.numpersion}} คน   </p>
+    <p>  ผู้บันทึกขอใช้ : {{cdata.persionuse}} </p>
+    <p>  ตำแหน่ง : {{cdata.Position}}</p>
 
     <button ion-button clear item-end >View</button>
   </ion-item>

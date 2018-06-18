@@ -25,9 +25,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'ตารางเรียน', component: SideSchedulePage,icon:'calendar' },
-      { title: 'ผลงาน', component: SidePortfolioPage ,icon:'albums' },
-      { title: 'ชำระเงิน', component: SidePaymentPage,icon:'logo-bitcoin'  },
+      { title: 'ข้อมูลส่วนตัว', component: SideSchedulePage,icon:'calendar' },
+      { title: 'รายงานความเสี่ยง', component: SidePortfolioPage ,icon:'albums' },
+      { title: 'ขอใช้รถยนต์', component: SidePaymentPage,icon:'logo-bitcoin'  },
       { title: 'ตั้งค่า', component: SideSettingPage,icon:'settings'  }
     ];
 
