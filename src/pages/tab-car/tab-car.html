@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>รายการขอใช้รถยนต์โรงพยาบาลบ่อเกลือ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+<ion-list>
+  <ion-item *ngFor="let cdata of responseData">
+    <ion-thumbnail item-start>
+      <img src="http://localhost/ionic_api/images/ambulance.png">
+    </ion-thumbnail>
+    <h1>แผนก : {{cdata.persionusecar}}         สถานที่ไป : {{cdata.station}}  </h1>
+    <h2> ใช้ในงาน : {{cdata.gostation}}     วันที่ไป :  {{cdata.dateuse|date:'dd/MM/yyyy'}}    วันที่กลับ :  {{cdata.datebake|date:'dd/MM/yyyy'}}  </h2>
+    <p>   จำนวผู้ร่วมเดินทาง :  {{cdata.numpersion}} คน   | ผู้บันทึกขอใช้ : {{cdata.persionuse}}  ตำแหน่ง : {{cdata.Position}}</p>
+
+    <button ion-button clear item-end >View</button>
+  </ion-item>
+
+  
+</ion-list>
+
+
+</ion-content>

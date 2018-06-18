@@ -31,6 +31,9 @@ import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
 import { RegisterPage } from '../pages/register/register';
 import { PatientPage } from '../pages/patient/patient';
 import { PatientdetailPage } from '../pages/patientdetail/patientdetail';
+import { TabPatientPage } from '../pages/tab-patient/tab-patient';
+import { TabCarPage } from '../pages/tab-car/tab-car';
+
 
 
 @NgModule({
@@ -49,7 +52,10 @@ import { PatientdetailPage } from '../pages/patientdetail/patientdetail';
     CoursedetailPage,
 RegisterPage,
 PatientPage,
-PatientdetailPage
+PatientdetailPage,
+TabPatientPage,
+TabCarPage
+
  
    
   ],
@@ -75,7 +81,10 @@ PatientdetailPage
     CoursedetailPage,
     RegisterPage,
     PatientPage,
-    PatientdetailPage
+    PatientdetailPage,
+    TabPatientPage,
+    TabCarPage
+
  
   
   ],
