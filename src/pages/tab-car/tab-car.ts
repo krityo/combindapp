@@ -46,5 +46,6 @@ export class TabCarPage {
     }, 2000);
   }
 
+  //เขียน ฟังก์ชั่นรับ event click
   
 }
