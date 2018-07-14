@@ -36,6 +36,8 @@ import { TabCarPage } from '../pages/tab-car/tab-car';
 
 
 
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -54,7 +56,8 @@ RegisterPage,
 PatientPage,
 PatientdetailPage,
 TabPatientPage,
-TabCarPage
+TabCarPage,
+
 
  
    
@@ -63,6 +66,7 @@ TabCarPage
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
+
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
@@ -83,7 +87,8 @@ TabCarPage
     PatientPage,
     PatientdetailPage,
     TabPatientPage,
-    TabCarPage
+    TabCarPage,
+   
 
  
   
